@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CSS/Biogass.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biogassprosjekt</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="../Html/HvordanFungererBiogass.html">Hvordan Fungerer Biogass?</a>
+            <a href="../Html/StatestikkNaturfag.html">statestikk</a>          
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Velkommen til Biogassprosjektet</h1>
+        <p>Utforsk hvordan vi kan brruke matavfall til å produsere bærekraftig energi.</p>
+        <img src="/Bilder/Biogass bildet.jpg">
+    </section>
+
+    <main>
+        <section id="introduksjon">
+            <h2>Introduksjon</h2>
+            <p>Dette prosjektet handler om produksjon av biogass ved å bruke matavfall som råmateriale. Hovedmålet er å vise hvordan vi på en bærekraftig måte kan utnytte biologisk nedbrytbart avfall og samtidig bidra til en mer effektiv ressursforvaltning.</p>
+        </section>
+
+        <section id="forskningssporsmal">
+            <h2>Forskningsspørsmål</h2>
+            <p><strong>Problemstilling:</strong>Hvordan kan vi omdanne matavfall til biogass og bruke det som en bærekraftig energikilde? </p>
+        </section>
+
+        <section id="eksperiment">
+            <h2>Eksperiment</h2>
+            <p>For å lage biogass har vi gjort følgende:</p>
+            <ul>
+                <li>Lagt frukt og annen mat som kan råtne i en plastflaske.</li>
+                <li>Plassert en ballong på toppen for å samle opp gassen som produseres.</li>
+                <li>Overvåket prosessen i 2 uker.</li>
+            </ul>
+        </section>
+        <section id="resultater">
+            <h2>Resultater</h2>
+            <p>Under dette eksperimentet la vi merke til at mengden biogass som ble produsert var lavere enn vi hadde forventet. Dette kan ha vært på grunn av flere mulige årsaker:</p>
+            <ul>
+                <li>For lav temperatur: Rommet der eksperimentet ble gjennomført hadde ikke høy nok temperatur til å fremme anaerob nedbrytning.</li>
+                <li>Mangel på vann: Det var ikke nok vann i flasken til å sikre et optimalt fuktig miljø for mikroorganismene.</li>
+                <li>Uegnet materiale: Valg av frukt og annen mat som kan råtne, kan ha vært mindre effektivt for biogassproduksjon.</li>
+            </ul>
+            <p>For å forbedre eksperimentet i fremtiden vil vi:</p>
+            <ul>
+                <li>Øke temperaturen i rommet under eksperimentet.</li>
+                <li>Tilsette mer vann i flasken.</li>
+                <li>Teste med andre typer matavfall som kan være bedre egnet for biogassproduksjon.</li>
+            </ul>
+            <div>
+            <img class="image" src="Bilder/Biogass,URGE.png" alt="Resultater av biogassprosjektet">
+           </div>
+        </section>
+
+        <section class="interactive">
+            <h2>Interaktiv del</h2>
+            <p>Se hvordan biogass kan brukes som energikilde ved å trykke på knappen under:</p>
+            <button id="popup-btn">Hva kan biogass brukes til?</button>
+        </section>
+
+        <section id="lydclip">
+            <h2>Vår biogass podcast!</h2>
+            <p>Lytt til et lydklipp om biogassproduksjon:</p>
+            <audio controls>
+                <source src="/Lydfiler/Podcast.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Popup and overlay -->
+        <div class="popup-overlay" id="popup-overlay"></div>
+        <div class="popup" id="popup">
+            <h3>Biogass Bruksområder</h3>
+            <p>Biogass kan brukes til:</p>
+            <ul>
+                <li>Matlaging</li>
+                <li>Oppvarming</li>
+                <li>Strømproduksjon</li>
+            </ul>
+            <button class="close-btn" id="close-btn">Lukk</button>
+        </div>
+    </main>
+
+    <script>
+        // Select elements
+        const popupBtn = document.getElementById("popup-btn");
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("popup-overlay");
+        const closeBtn = document.getElementById("close-btn");
+
+        // Show popup
+        popupBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+            overlay.style.display = "block";
+        });
+
+        // Hide popup
+        closeBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+        // Hide popup when clicking outside
+        overlay.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+    </script>
+</body>
+</html>
